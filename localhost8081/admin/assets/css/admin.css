@@ -1,0 +1,446 @@
+/* Admin Portal additions. Uses the exact design language of the existing
+   portal (colors, fonts, radii, shadows) and defines the admin classes that
+   the shared styles.css media queries already reference. */
+
+.admin-shell,
+.admin-card,
+.admin-topbar {
+    background: #fff
+}
+
+.admin-card {
+    border: 1px solid #d0d7df;
+    border-radius: 7px;
+    padding: 15px 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .10)
+}
+
+.admin-topbar {
+    height: 39px;
+    background: #e1f8ff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 14px
+}
+
+.admin-topbar small {
+    font-weight: 400;
+    color: #666
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #d2dce5;
+    border-radius: 6px;
+    padding: 13px 14px;
+    background: #f8fbfc
+}
+
+.stat-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    background: #dff3fc;
+    color: #0789c6;
+    display: grid;
+    place-items: center;
+    font-size: 19px;
+    flex-shrink: 0
+}
+
+.stat-card b {
+    display: block;
+    font-size: 19px;
+    line-height: 1.1
+}
+
+.stat-card span:not(.stat-icon):not(.fa-icon) {
+    font-size: 10px;
+    color: #666;
+    margin-top: 3px
+}
+
+.admin-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px 22px;
+    font-size: 11px;
+    line-height: 18px
+}
+
+.admin-meta b {
+    color: #175691
+}
+
+.admin-link {
+    color: #007fc7;
+    cursor: pointer
+}
+
+.admin-light-btn {
+    background: #8bc5df;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+    padding: 6px 14px;
+    font-weight: bold;
+    font-size: 11px;
+    cursor: pointer
+}
+
+.admin-submit-btn {
+    background: #0789c6;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+    padding: 6px 14px;
+    font-weight: bold;
+    font-size: 11px;
+    cursor: pointer
+}
+
+.admin-danger-btn {
+    background: #dc2626;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+    padding: 5px 12px;
+    font-weight: bold;
+    font-size: 10px;
+    cursor: pointer
+}
+
+.test-row {
+    background: #fff;
+    border: 1px solid #d2dce5;
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin-bottom: 10px
+}
+
+.test-row .t-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 9px;
+    flex-wrap: wrap
+}
+
+.test-row .t-head b {
+    font-size: 13px;
+    color: #0789c6
+}
+
+.test-row .t-fields {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 9px
+}
+
+.admin-inp {
+    border: 1px solid #c9d3dd;
+    border-radius: 3px;
+    background: #fff;
+    height: 28px;
+    padding: 0 8px;
+    font-size: 11px;
+    width: 100%
+}
+
+.admin-inp:focus {
+    outline: 1px solid #0789c6
+}
+
+.admin-row-form {
+    border: 1px solid #d2dce5;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    overflow: hidden
+}
+
+.admin-row-form .date-label {
+    background: #e1f8ff;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 8px 12px
+}
+
+.tt-inputs {
+    display: grid;
+    grid-template-columns: 150px 130px 1fr 74px;
+    gap: 7px;
+    padding: 9px 12px;
+    border-bottom: 1px solid #d2dce5;
+    background: #f8fbfc
+}
+
+.tt-inputs .admin-inp {
+    height: 27px
+}
+
+.row-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    padding: 9px 12px;
+    border-top: 1px solid #d2dce5;
+    background: #f8fbfc
+}
+
+.tt-table td,
+.tt-table th {
+    padding: 5px 6px
+}
+
+.tt-table input,
+.tt-table select {
+    width: 100%;
+    border: 1px solid #c9d3dd;
+    border-radius: 3px;
+    height: 25px;
+    padding: 0 7px;
+    font-size: 11px;
+    background: #fff
+}
+
+.gen-week {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 14px;
+    flex-wrap: wrap
+}
+
+.gen-week .admin-inp {
+    width: 150px
+}
+
+.pill {
+    display: inline-block;
+    background: #d9edf8;
+    color: #008bd0;
+    border-radius: 4px;
+    padding: 5px 9px;
+    font-weight: bold;
+    font-size: 10px
+}
+
+.override-input {
+    width: 90px;
+    border: 1px solid #c9d3dd;
+    border-radius: 3px;
+    height: 26px;
+    padding: 0 7px;
+    font-size: 11px
+}
+
+.res-table td input {
+    width: 100%;
+    min-width: 60px;
+    border: 1px solid #c9d3dd;
+    border-radius: 3px;
+    height: 24px;
+    padding: 0 6px;
+    font-size: 10px
+}
+
+.select-test {
+    height: 29px;
+    min-width: 300px;
+    border: 1px solid #c9d3dd;
+    border-radius: 3px;
+    background: #fff;
+    padding: 0 10px;
+    font-size: 12px;
+    margin-bottom: 12px
+}
+
+.empty-note {
+    padding: 25px;
+    border: 1px solid #d2dce5;
+    background: #f8f8f8;
+    color: #666
+}
+
+@media(max-width:800px) {
+    .stat-grid {
+        grid-template-columns: 1fr 1fr
+    }
+    .admin-meta {
+        grid-template-columns: 1fr
+    }
+    .test-row .t-fields {
+        grid-template-columns: 1fr 1fr
+    }
+    .tt-inputs {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+@media(max-width:480px) {
+    .stat-grid {
+        grid-template-columns: 1fr
+    }
+    .test-row .t-fields {
+        grid-template-columns: 1fr
+    }
+    .tt-inputs {
+        grid-template-columns: 1fr
+    }
+}
+
+/* ---- timetable week editor (6 columns) ---- */
+
+.tt-inputs.tt-header,
+.tt-inputs.tt-row {
+    grid-template-columns: 150px 120px 1fr 1fr 90px 84px;
+    align-items: center
+}
+
+.tt-inputs.tt-header {
+    background: #eef6fb;
+    font-weight: bold;
+    font-size: 10px;
+    color: #234;
+    border-bottom: 1px solid #d2dce5
+}
+
+.tt-inputs.tt-row {
+    border-bottom: 1px solid #eef2f5;
+    background: #fff
+}
+
+.tt-inputs.tt-row+.tt-inputs.tt-row {
+    border-top: 1px solid #eef2f5
+}
+
+.empty-row {
+    display: block;
+    padding: 12px
+}
+
+.empty-row .empty-note {
+    padding: 10px;
+    border: 0
+}
+
+.day-head {
+    padding: 12px 2px
+}
+
+/* ---- month / session / audit tables ---- */
+
+.month-table td,
+.session-table td,
+.audit-table td {
+    vertical-align: middle
+}
+
+.month-table .admin-inp {
+    max-width: 110px
+}
+
+.session-table,
+.audit-table {
+    margin-top: 8px
+}
+
+/* ---- preview modal ---- */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 90;
+    padding: 18px
+}
+
+.modal-box {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .3);
+    max-width: 860px;
+    width: 100%;
+    max-height: 86vh;
+    display: flex;
+    flex-direction: column
+}
+
+.modal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 16px;
+    background: #e1f8ff;
+    border-radius: 8px 8px 0 0
+}
+
+.modal-body {
+    overflow: auto;
+    padding: 12px 16px;
+    flex: 1
+}
+
+.modal-body .simple-table {
+    min-width: 640px
+}
+
+.modal-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 16px;
+    border-top: 1px solid #d2dce5;
+    background: #f8fbfc;
+    border-radius: 0 0 8px 8px
+}
+
+@media(max-width:800px) {
+    .tt-inputs.tt-header,
+    .tt-inputs.tt-row {
+        grid-template-columns: 1fr 1fr
+    }
+    .tt-inputs.tt-row .admin-danger-btn {
+        grid-column: 1/3
+    }
+    .modal-foot {
+        flex-wrap: wrap
+    }
+}
+
+@media(max-width:480px) {
+    .tt-inputs.tt-header,
+    .tt-inputs.tt-row {
+        grid-template-columns: 1fr
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important
+    }
+}
